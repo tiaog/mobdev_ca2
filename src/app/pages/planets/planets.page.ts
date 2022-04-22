@@ -21,4 +21,10 @@ export class PlanetsPage implements OnInit {
     });
   }
 
+  openDetails(planet) {
+    let split = planet.url.split('/');
+    let planetId = split[split.length-2];
+    this.router.navigateByUrl(`/tabs/films/${planetId}`);
+  }
+
 }
