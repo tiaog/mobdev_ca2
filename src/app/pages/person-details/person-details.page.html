@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>person-details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(people:people)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ person?.name }}</ion-title>
+    <ion-buttons slot="end">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+ 
+<ion-content padding="">
+ 
 
-<ion-content>
+ 
+    <ion-item class="person-info" lines="none">
+      <ion-icon name="person" slot="start"></ion-icon>
+  
+    </ion-item>
+ 
 
+    </ion-item>
+  </ion-card>
+ 
 </ion-content>

@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>planet-details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(planets:planets)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ planet?.name }}</ion-title>
+    <ion-buttons slot="end">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+ 
+<ion-content padding="">
+ 
 
-<ion-content>
+ 
+    <ion-item class="planet-info" lines="none">
+      <ion-icon name="planet" slot="start"></ion-icon>
+  
+    </ion-item>
+ 
 
+    </ion-item>
+  </ion-card>
+ 
 </ion-content>
