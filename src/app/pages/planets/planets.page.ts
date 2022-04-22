@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-planets',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsPage implements OnInit {
 
-  constructor() { }
+  planets: Observable<any>;
+ 
+  constructor(private router: Router, private http: HttpClient) { }
+
 
   ngOnInit() {
+    this.planets = this.http.get('https://swapi.co/api/planets');
+    this.planets.subscribe(data => {
+      console.log('my data: ', data);
+    });
   }
 
 }
